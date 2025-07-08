@@ -1,0 +1,7 @@
+<button (click)="createTask = true">Создание</button>
+<app-table
+  [dataSource]="tasks"
+  [columnLabels]="labels"
+  [displayedColumns]="columns"
+/>
+<app-tasks-create *ngIf="createTask" (tasks)="newTask($event)"></app-tasks-create>

@@ -1,0 +1,19 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+
+.wrapper {
+    position: relative;
+}
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.layout {}
+
+.app-footer {}
