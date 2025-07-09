@@ -1,8 +1,8 @@
-<form [formGroup]="form" (ngSubmit)="Submit()">
-  <input formControlName="title">
-  <input formControlName="description">
+<form class="frm" [formGroup]="form" (ngSubmit)="Submit()">
+  <input class="input" formControlName="title" placeholder="Title">
+  <input class="input" formControlName="description" placeholder="Description">
   <select formControlName="status">
     <option *ngFor="let s of statuses" [value]="s.status">{{ s.status }}</option>
   </select>
-  <button type="submit">Создать</button>
+  <button class="btn" type="submit">Создать</button>
 </form>

@@ -1,5 +1,8 @@
-<div *ngIf="task" class="card">
-  <h3>{{ task.title }}</h3>
-  <p><strong>Описание:</strong> {{ task.description }}</p>
-  <p><strong>Статус:</strong> {{ task.status }}</p>
+<div class="wrapper">
+  <div *ngIf="task" class="card">
+    <a [routerLink]="['/tasks']">Назад</a>
+    <h3>{{ task.title }}</h3>
+    <p><strong>Описание:</strong> {{ task.description }}</p>
+    <p><strong>Статус:</strong> {{ task.status }}</p>
+  </div>
 </div>

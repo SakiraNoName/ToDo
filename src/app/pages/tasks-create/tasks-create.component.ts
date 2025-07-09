@@ -35,9 +35,9 @@ export class TasksCreateComponent {
         description: formValue.description ?? '',
         status: formValue.status ?? ''
       };
-      console.log('Создана задача:', newTask);
 
       this.tasks.emit(newTask);
+      this.tasksService.createTask(newTask);
       this.form.reset();
     } else {
       console.log('Форма невалидна');

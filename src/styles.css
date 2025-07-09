@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn {
+  padding: 10px;
+  background-color: teal;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,18 @@
+.frm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+  padding: 0.4rem;
+  width: 300px;
+  background-color: #9a9898;
+  border-radius: 10px;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+}

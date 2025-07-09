@@ -1,4 +1,4 @@
-<button (click)="createTask = true">Создание</button>
+<button class="btn" (click)="createTask = !createTask">{{createTask ? 'Закрыть' : 'Создать'}}</button>
 <app-table
   [dataSource]="tasks"
   [columnLabels]="labels"

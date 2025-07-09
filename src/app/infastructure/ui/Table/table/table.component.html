@@ -1,4 +1,8 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+<div style="display: flex; gap: 5px; justify-content: center">
+  <input type="text" placeholder="Поиск по заголовку" #filter>
+  <button class="btn" type="button" (click)="filterResults(filter.value)">Search</button>
+</div>
+<table mat-table [dataSource]="filteredTasks">
 
   <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
     <th mat-header-cell *matHeaderCellDef> {{ columnLabels[column] || column }} </th>

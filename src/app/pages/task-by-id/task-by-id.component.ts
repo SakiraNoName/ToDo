@@ -10,7 +10,7 @@ import {Tasks} from 'src/app/domain/tasks/tasks';
 })
 export class TaskByIdComponent implements OnInit {
   taskId: number = 0;
-  task!: Tasks;
+  task!: Tasks | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,7 +24,6 @@ export class TaskByIdComponent implements OnInit {
       if (id) {
         this.taskId = +id;
         console.log(1);
-        //@ts-ignore
         this.task = this.taskService.getTaskById(this.taskId);
       }
     });

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { TasksService } from 'src/app/application/tasks/tasks.service';
-import { Tasks } from 'src/app/domain/tasks/tasks';
+import {Component, OnInit} from '@angular/core';
+import {TasksService} from 'src/app/application/tasks/tasks.service';
+import {Tasks} from 'src/app/domain/tasks/tasks';
 
 @Component({
   selector: 'app-tasks',
@@ -8,7 +8,7 @@ import { Tasks } from 'src/app/domain/tasks/tasks';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent {
-  createTask:boolean = false;
+  createTask: boolean = false;
 
   tasks: Tasks[] = [];
   columns: string[] = ['id', 'title', 'description', 'status', 'action'];
@@ -20,9 +20,11 @@ export class TasksComponent {
     status: 'Статус',
     action: 'Действие'
   };
+
   newTask(event: Tasks) {
     this.tasks = [...this.tasks, event];
   }
+
   constructor(taskService: TasksService) {
     this.tasks = taskService.getTasks();
   }
